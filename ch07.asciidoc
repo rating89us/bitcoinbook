@@ -725,7 +725,7 @@ Now, let’s look at the corresponding transaction that Bob uses to spend this o
 [...]
 ----
 
-However, to spend the Segregated Witness output, the transaction has no signature on that input. Instead, Bob’s transaction has an empty +scriptSig+ and includes a Segregated Witness, outside the transaction itself:
+However, to spend the Segregated Witness output, the transaction has no signature on that input. Instead, Bob’s transaction has an empty +scriptSig+ in the transaction data (the first part of a transaction) and includes his signature in the witness data (the second part of a transaction, which is separated from the transaction data):
 
 .Decoded transaction showing a P2WPKH output being spent with separate witness data
 ----
